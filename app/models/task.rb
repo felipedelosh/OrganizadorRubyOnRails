@@ -7,6 +7,8 @@ class Task < ApplicationRecord
   validates :name, :description, presence: true
   validate :due_data_validity
 
+  accepts_nested_attributes_for :participating_user,  allow_destroy: true
+
 
   def due_data_validity
     return if due_data.blank?
