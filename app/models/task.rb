@@ -1,5 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :category
+  belongs_to :owner, class_name: 'User'
 
   validates :name, :description, presence: true
   validate :due_data_validity
