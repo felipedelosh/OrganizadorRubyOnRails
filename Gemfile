@@ -29,6 +29,22 @@ gem 'hamlit'
 gem 'simple_form'
 gem 'devise'
 
+# need to install cocoon:
+# yarn add 'github:nathanvda/cocoon#c24ba53'
+# add in /app/javascripts/packs/application.js :: import 'cocoon'
+# add in /config/webpack/enviroment.js
+# const webpack = require('webpack')
+#environment.plugins.prepend('Provide',
+#  new webpack.ProvidePlugin({
+#    $: 'jquery',
+#    jQuery: 'jquery',
+#    'window.jQuery': 'jquery',
+#    Popper: ['popper.js', 'default']
+#  }
+#  )
+#)
+gem 'cocoon'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
